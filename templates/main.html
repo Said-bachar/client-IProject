@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- Option to extend rules -->
+    <div class="content__rules">
+        <div class="info">
+            <button id="rules__btn" class="" onclick="showRules()">
+                <i class="fa fa-info icon-info-sign" aria-hidden="true"></i>
+                <span class="extra-info">
+                CHECK OUT RULES
+            </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Welcome message -->
+    <div class="content__container index__container">
+        <div class="screen-alert">
+            <div id="message">
+                <div class="" role="alert">
+                    Welcome to the game!
+                </div>
+            </div>
+        </div>
+        <h3 id="index__slogan" class="mt-4 mb-3 explanations">Can you learn faster than the AI?</h3>
+        <h4 id="index__slogan" class="mt-4 mb-3 explanations">Check out the rules on the top left info button!</h4>
+
+        <a href="#">
+            <button class="content__btn">Challenge accepted!</button>
+        </a>
+    </div>
+
+    <!-- Explanation of rules -->
+    <div id="rules__text" class="content__container index__container mt-3 mb-5" style="display:none;">
+        <div>
+            <p class="explanations">Rule 1 : bla bla.................................................................................................................</p>
+            <img class="my-5 explanations__img" src="..\static\img\initial_board.PNG" alt="Initial Nim board"
+                 style="width:50%">
+            <p class="explanations">Rule 2 : blo blo ....................................................................................................................................</p>
+            <p class="explanations">Rule 3 : bli bli ....................................................................................................................................</p>
+            <img class="my-5 explanations__img" src="..\static\img\board_end.PNG" alt="Initial Nim board"
+                 style="width:30%">
+            <p class="explanations">Rule x : .........................................................................................................</p>
+        </div>
+    </div>
+
+{% endblock %}
