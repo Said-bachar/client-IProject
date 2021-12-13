@@ -578,3 +578,87 @@ input[type="range"] {
 #set-amount {
   display: inline-block;
 }
+
+
+/* For the available modes ...*/
+/*----------------Added just for test --------------*/
+/*Pas important, juste pour positioner la liste déroulante en milieude page */
+.bloc {
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*Réinitilaisation de la liste déroulante*/
+select {
+  appearance: none;
+  outline: 0;
+  border: 0 !important;
+  background: #F9F9F9;
+  background-image: none;
+  box-shadow: none;
+  font-size: 1.2em;
+}
+
+/*Ajout des couleurs de fond pour chaque option */
+select option[value="1"] {
+  background: #2E6DB4;
+  color: white;
+}
+
+select option[value="2"] {
+  background: #107C11;
+  color: white;
+}
+
+select option[value="3"] {
+  background: #E70009;
+  color: white;
+}
+
+select option[value="4"] {
+  background: black;
+  color: white;
+}
+
+/* Mise en forme de la div .select*/
+.select {
+  position: relative;
+  width: 350px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #CED4DA;
+}
+
+/* Mise en forme de la balise select*/
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-left: 15px;
+  color: #555555;
+  cursor: pointer;
+}
+
+
+/* Mise en place de la flèche */
+.select::after {
+  content: '\276F';
+  position: absolute;
+  top: 20%;
+  right: 0;
+  padding: 0 15px;
+  background: white;
+  pointer-events: none;
+  transform: rotate(90deg);
+  font-size: 1.5em;
+  background: #F9F9F9;
+}
+
+
+.select:hover::after {
+  color: #FA6141;
+}
