@@ -6,167 +6,7 @@
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <style>
-
-        html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: #ffffff url('../static/images/geometry2.png'); /* Background pattern from Subtle Patterns */
-    font-family: 'Coda', cursive;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-}
-
-/*
- * Styles for the deck of cards
- */
-
-.deck1 {
-    width: 660px;
-    min-height: 320px;
-    background: linear-gradient(160deg, rgba(46, 61, 73, 0.5) 0%, rgba(224, 229, 233, 0.5) 100%);
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 2px;
-}
-
-.deck2 {
-    width: 660px;
-    min-height: 320px;
-    background: linear-gradient(160deg, rgba(46, 61, 73, 0.5) 0%, rgba(224, 229, 233, 0.5) 100%);
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0 10px;
-}
-
-
-
-
-/*
- * Styles for the Score Panel
- */
-
-.score-panel {
-    text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
-}
-
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-}
-
-.score-panel .stars li {
-    list-style: none;
-    display: inline-block;
-}
-
-.gold-star{color: gold}
-
-.score-panel .restart {
-    float: right;
-    cursor: pointer;
-}
-
-/* Popup */
-.popup {
-    background: #02ccba;
-    z-index: 1;
-    display: none;
-    margin: 0 auto;
-    width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    left: 0;
-    top: 0;
-}
-
-.content {
-    padding: 10px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.562);
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    
-}
-
-.close {
-    color: #000;
-    float: right;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.gcard{
-    height: 300px; 
-    width: 550px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-}
-
-.rotate {
-  animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-
-    </style>
+     <link rel="stylesheet" href="../static/css/new-g.css">
 </head>
 <body>
     <div class="container">
@@ -184,9 +24,10 @@ h1 {
                 <i class="fa fa-repeat"></i> Restart game
             </div>
         </section>
-        <div id="basicUsage"><i class="fa fa-clock-o"></i> 00:00:00 </div>
+        <div id="basicUsage" style="text-align: center;"><i style="display: inline-block; margin-right: 6px;" class="fa fa-clock-o"></i><h5 style="display: inline-block;" ><time></time></h5></div>
         <ul class="deck1" style="justify-content: center; display: flex;">
-            <img src="../static/images/test.jpg" alt="simple card" class="gcard">
+            <img src="../static/images/test.jpg" alt="simple card" class="gcard diapo" onclick="boutons(1)">
+            <!-- <img src="../static/images/icon.png" alt="simple card" class="gcard diapo" onclick="boutons(-1)"> -->
         </ul>
         <hr style="border: #44464778 dashed 1px; width: 80%; margin: 19px 0 9px;">
         <ul class="deck2" style="justify-content: center; display: flex;">
@@ -205,6 +46,7 @@ h1 {
         </div>
     </div>
 
+    <script src="../static/js/new-g.js"></script>
 </body>
 
 </html>
