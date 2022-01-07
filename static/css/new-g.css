@@ -17,10 +17,7 @@
             padding: 0;
         }
         
-        body {
-            background: #ffffff url('../static/images/geometry2.png'); /* Background pattern from Subtle Patterns */
-            font-family: 'Coda', cursive;
-        }
+      
         
         .container {
             display: flex;

@@ -48,6 +48,15 @@ def get_data():
     res = requests.get("http://my-api.com")
     return res.content
 
+
+#TEST Here ...
+
+@app.route("/getPixels", methods=['GET'])
+def getPixels():
+    return render_template('test.html')
+
+#GET PORTS :------------------------------------------------------
+
      
 
 if __name__ == "__main__":
