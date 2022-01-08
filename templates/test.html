@@ -14,7 +14,7 @@
     <div id="status"></div><br>
     <div id="color" style="width:30px;height:30px;"></div>
     <p>
-        Move the mouse over the BUS !
+        ---- POSITION and COLOR ----
     </p>
 
     <script>
@@ -60,7 +60,7 @@
         }
         // Draw a base64 image because this is a fiddle, and if we try with an image from URL we'll get tainted canvas error
         // Read more about here : http://ourcodeworld.com/articles/read/182/the-canvas-has-been-tainted-by-cross-origin-data-and-tainted-canvases-may-not-be-exported
-        drawImageFromWebUrl("../static/images/Card4.jpg");
+        drawImageFromWebUrl("../static/images/test.jpg");
 
         canvas.addEventListener("mousemove",function(e){
             var eventLocation = getEventLocation(this,e);

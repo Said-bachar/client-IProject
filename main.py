@@ -36,17 +36,37 @@ def join_game():
     return None
      # TO-DO
 
-API_URL = "http://192.168.37.69:50000"
+API_URL1 = "http://192.168.37.69:50000"
+
+#GET PORTS :------------------------------------------------------
+
+API_URL2 = "http://192.168.37.69:50000/port"
 
 @app.route("/test", methods=['GET'])
 def test():
-    res = requests.get(API_URL)
-    return res.json()
+    res = requests.get(API_URL2)
+    port = res.json()
+    return 'Our port is :' + str(port.get('numport')) # our port
+   # return port
 
-@app.route("/some-url", methods=['GET'])
-def get_data():
-    res = requests.get("http://my-api.com")
-    return res.content
+
+port = 0
+
+def getPort():
+    res = requests.get(API_URL2)
+    port = res.json()
+    return port.get('numport') # our port
+
+port = getPort()
+
+
+
+
+
+# @app.route("/some-url", methods=['GET'])
+# def get_data():
+#     res = requests.get("http://my-api.com")
+#     return res.content
 
 
 #TEST Here ...
@@ -55,7 +75,15 @@ def get_data():
 def getPixels():
     return render_template('test.html')
 
-#GET PORTS :------------------------------------------------------
+# TODO : Req to Discovery service > CardManager
+# Get All cards > store
+# Send cards to the view
+# Manipulate each card
+# Implement the logic <> IA ):
+
+
+
+
 
      
 
