@@ -36,28 +36,16 @@ def join_game():
     return None
      # TO-DO
 
-API_URL1 = "http://192.168.37.69:50000"
+     
 
-#GET PORTS :------------------------------------------------------
+# API_URL1 = "http://192.168.37.69:50000"
 
-API_URL2 = "http://192.168.37.69:50000/port"
-
-@app.route("/test", methods=['GET'])
-def test():
-    res = requests.get(API_URL2)
-    port = res.json()
-    return 'Our port is :' + str(port.get('numport')) # our port
-   # return port
-
-
-port = 0
-
-def getPort():
-    res = requests.get(API_URL2)
-    port = res.json()
-    return port.get('numport') # our port
-
-port = getPort()
+# @app.route("/test", methods=['GET'])
+# def test():
+#     res = requests.get(API_URL1)
+#     port = res.json()
+#     return 'Our port is :' + str(port.get('numport')) # our port
+#    # return port
 
 
 

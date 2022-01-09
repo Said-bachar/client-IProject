@@ -591,6 +591,13 @@ input[type="range"] {
   height: 100vh;
 }
 
+.imgGame {
+  width: 350px;
+  height: 45px;
+  margin-bottom: 0;
+ 
+}
+
 /*Réinitilaisation de la liste déroulante*/
 select {
   appearance: none;
