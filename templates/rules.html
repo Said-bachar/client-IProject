@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cards's Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+     <link rel="stylesheet" href="../static/css/desing.css">
+     <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+     <style>
+           body {
+                background: #ffffff url('../static/images/geometry2.png'); /* Background pattern from Subtle Patterns */
+                font-family: 'Coda', cursive;
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+                font-family: "VT323", monospace;
+                line-height: 1.42;
+                display: flex;
+                align-items: center;
+                justify-content: center
+        }
+
+            .content__container {
+                padding: 40px;
+                border-radius: 10px;
+                max-width: 70%;
+                text-align: center;
+                ;
+            }
+            .index__container {
+                width: 50%;
+            }
+            #rules__text {
+                /* background-color: rgba(27, 27, 27, 0.2); */
+                box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+                background: linear-gradient(160deg, rgba(46, 61, 73, 0.5) 0%, rgba(224, 229, 233, 0.5) 100%);
+            
+            }
+            .__btn {
+                padding: 15px 25px;
+                margin-top: 20px;
+                background-color: #ffffff;
+                text-transform: uppercase;
+                box-shadow: 0px 6px 0px 0px #6b6b6b, 0px 5px 12px 0px rgba(43, 43, 43, 0.6),
+                    inset 0px 0px 10px -5px #1c2a3a;
+                transition: all 100ms linear;
+                cursor: pointer;
+                border-radius: 5px;
+                border: none;
+                height: 60px;
+                color: rgb(51, 51, 51);
+            }
+            .__btn:hover {
+                top: 3px;
+                left: -3px;
+                box-shadow: 0px 2px 0px 0px #7690d6, 0px 5px 5px 0px rgba(0, 0, 0, 0.6),
+                    inset 0px 0px 10px -5px #1c2a3a;
+            }
+            .logo2 {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+            .logo2 > img {
+                box-shadow: 0px 2px 0px 0px #383838, 0px 5px 5px 0px rgba(0, 0, 0, 0.6),
+                    inset 0px 0px 10px -5px #1c2a3a;
+            }
+            
+     </style>
+</head>
+<body>
+    <a href="/">
+        <div class="logo" style="color: rgba(35, 35, 36, 0.548);">&#60; Cards's Game &#62;</div>
+    </a>
+    <div class="logo2">
+        <img src="../static/images/iconG.png" alt="Games'Icon.." style="width: 80px; height: 80px; border-radius: 50%;">
+    </div>
+
+    
+    <!-- Explanation of rules -->
+    <div id="rules__text" class="content__container index__container mt-3 mb-5">
+        <h3 style="color: rgb(37, 37, 37);"> Remeber the game rules..</h3> 
+        <div>
+            <p class="explanations" style="color: rgb(83, 83, 87);"><i class="fa fa-gavel" aria-hidden="true"></i> Rule 1 : Choose the necessary time to play the part ..</p>
+            <!-- <img class="my-5 explanations__img" src="" alt="" style="width:50%"> -->
+            <p class="explanations" style="color: rgb(83, 83, 87);"><i class="fa fa-gavel" aria-hidden="true"></i> Rule 2 : Click on the top card to detect the common object with the bottom card..</p>
+            <p class="explanations" style="color: rgb(83, 83, 87);"><i class="fa fa-gavel" aria-hidden="true"></i> Rule 3 : Accept the challenge to start the game, the goog luck to Spot it :)</p>
+            <img class="my-5 explanations__img" src="" alt="" style="width:30%">
+        </div>
+        <h3 style="color: rgb(37, 37, 37);">  Choose the time to solve it :)</h3> 
+        <label for="customRange1" class="form-label" id="time"></label>
+        <input type="range" class="form-range" id="customRange1" style="background-color: rgba(62, 63, 63, 0.479);">
+        <form action="/new-game", method="post">
+            <button class="__btn" onclick="getTime()">Spot it!</button>
+        </form>
+    </div>
+ <script src="../static/js/rules.js"></script>
+
+</body>
+
+</html>

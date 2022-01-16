@@ -121,4 +121,4 @@ function showRules() {
     }
 }
 
-numberOfRounds.addEventListener("input", rangeValue);
+// numberOfRounds.addEventListener("input", rangeValue);

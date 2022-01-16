@@ -1,5 +1,7 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, Response, request
+import time
 import requests
+import json
 
 app = Flask(__name__) 
 
@@ -26,6 +28,12 @@ def add_images():
     return None
     # TO-DO
 
+@app.route("/rules", methods=['POST', 'GET'])
+def rules():
+  return render_template('rules.html')
+
+
+
 
 @app.route("/new-game", methods=['POST', 'GET'])
 def new_game():
@@ -36,16 +44,39 @@ def join_game():
     return None
      # TO-DO
 
-     
+API_URL1 = "http://192.168.37.69:50000"
 
-# API_URL1 = "http://192.168.37.69:50000"
+#GET PORTS :------------------------------------------------------
+
+API_URL2 = "http://192.168.37.69:50000/port"
 
 # @app.route("/test", methods=['GET'])
 # def test():
-#     res = requests.get(API_URL1)
+#     res = requests.get(API_URL2)
 #     port = res.json()
 #     return 'Our port is :' + str(port.get('numport')) # our port
 #    # return port
+
+
+@app.route("/apitest", methods=['POST', 'GET'])
+def apitest():
+#     reqParms = request
+#     return render_template('test.html', param=reqParms)
+    x = request.get_json(silent=True)
+    print(json.loads(request.data.decode("utf-8")))
+    # log the user out
+    return render_template('test.html', X = x)
+
+# port = 0
+
+# def getPort():
+#     res = requests.get(API_URL2)
+#     port = res.json()
+#     return port.get('numport') # our port
+
+# port = getPort()
+
+# PORT = requests.get(API_URL2)
 
 
 
@@ -71,9 +102,16 @@ def getPixels():
 
 
 
+#TO-DO :
+   # WAIT CARDS 
+   # SEND UR RESPONSE
+   # SCORE ++ OR --
+   # IF SCORE
+   # Get the timer
+   # Show it
+   #  
 
 
-     
 
 if __name__ == "__main__":
     app.run(debug = True)   
